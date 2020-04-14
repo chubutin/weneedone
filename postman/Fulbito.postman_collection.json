@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "cd115cf2-7298-4665-88cf-436e61210c43",
+		"name": "Fulbito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}:{{local_port}}/",
+					"host": [
+						"{{local_url}}"
+					],
+					"port": "{{local_port}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Ramiro\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}:{{local_port}}/accounts/",
+					"host": [
+						"{{local_url}}"
+					],
+					"port": "{{local_port}}",
+					"path": [
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

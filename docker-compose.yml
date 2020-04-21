@@ -21,7 +21,6 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: test
     image: postgres:latest
     networks:
       - default
@@ -30,5 +29,5 @@ services:
     restart: always
     volumes:
       - ./data-postgres:/var/lib/postgresql
-      - ./init.sql/1_init_db.sql:/docker-entrypoint-initdb.d/1_init_db.sql
-      - ./init.sql/2_create_tables.sql:/docker-entrypoint-initdb.d/2_create_tables.sql
+      - ./sql/1_setup.sql:/docker-entrypoint-initdb.d/1_setup.sql
+      - ./sql/2_create_tables.sql:/docker-entrypoint-initdb.d/2_create_tables.sql

@@ -6,6 +6,39 @@
 	},
 	"item": [
 		{
+			"name": "Matches",
+			"item": [
+				{
+					"name": "Create Match",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"match_name\": \"Partido de Chubutin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}:{{local_port}}/matches",
+							"host": [
+								"{{local_url}}"
+							],
+							"port": "{{local_port}}",
+							"path": [
+								"matches"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "home",
 			"request": {
 				"method": "GET",
@@ -17,34 +50,6 @@
 					],
 					"port": "{{local_port}}",
 					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "accounts",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"name\": \"Ramiro\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{local_url}}:{{local_port}}/accounts/",
-					"host": [
-						"{{local_url}}"
-					],
-					"port": "{{local_port}}",
-					"path": [
-						"accounts",
 						""
 					]
 				}

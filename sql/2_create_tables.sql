@@ -31,7 +31,9 @@ CREATE TABLE IF NOT EXISTS fulbito_schema.matches(
     id uuid DEFAULT extensions.uuid_generate_v4 () NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp),
     match_date_time TIMESTAMP WITH TIME ZONE NOT NULL,
-    related_last_math uuid,
+    related_last_match uuid,
+    match_name VARCHAR(64),
+    --TODO MAKE IT NOT NULL
     created_by uuid,
     PRIMARY KEY (id),
     FOREIGN KEY (created_by) REFERENCES fulbito_schema.users (id)

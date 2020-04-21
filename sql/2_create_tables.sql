@@ -1,4 +1,6 @@
---use database fulbito_db
+\connect fulbito_db;
+
+SET ROLE fulbito_app;
 
 CREATE TABLE IF NOT EXISTS fulbito_schema.users (
     id uuid DEFAULT extensions.uuid_generate_v4() NOT NULL,
@@ -21,7 +23,7 @@ CREATE TABLE IF NOT EXISTS fulbito_schema.venues (
     addressLine VARCHAR(64),
     addressLine2 VARCHAR(64),
     country VARCHAR(64),
-    -- location 
+    -- location
     PRIMARY KEY (id)
 );
 

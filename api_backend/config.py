@@ -13,7 +13,7 @@ class Config:
 
     # Database
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI',
-                                             'postgresql+psycopg2://test:test@0.0.0.0:5405/test')
+                                             'postgresql+psycopg2://test:test@0.0.0.0:5405/fulbito')
     SQLALCHEMY_USERNAME = 'test'
     SQLALCHEMY_PASSWORD = 'test'
     SQLALCHEMY_DATABASE_NAME = 'test'
